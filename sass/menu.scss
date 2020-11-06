@@ -1,0 +1,105 @@
+.incluir {
+    position: relative;
+}
+.incluir input {
+  -webkit-appearance: none;   
+  -moz-appearance: window;   
+  -ms-appearance: window;  
+  appearance: window; 
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 40px;
+}
+.incluir input + label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* display: inline-block; */
+  background: transparent url('../assets/img/logo.png') no-repeat 0 0;
+  background-size: cover;
+  display: block;
+  width: 46px;
+  height: 46px; 
+  content: '';
+  vertical-align: middle;
+  transition-duration: 2s;
+}
+.incluir input:checked + label::before {
+  background: transparent url('../assets/img/logo.png') no-repeat 0 0;
+  background-size: cover;  
+}
+
+/* ----------- */
+/* [ON BIG SCREEN] */
+/* Wrapper */
+#hamnav {
+    width: 100%;
+    /* Optional */
+    position: sticky;
+    top: 0;
+
+  }
+  
+  /* Hide Hamburger */
+  #hamnav label, #hamburger { display: none; }
+  
+  /* Horizontal Menu Items */
+  #hamitems { display: flex; }
+  #hamitems a {
+    width: 20%; /* 100% / 5 tabs = 20% */
+    padding: 5px;
+    color: #2A2929;
+    text-decoration: none;
+    background-color: white;
+    text-align: center;
+  }
+
+
+  #hamitems a:hover {
+      transition-duration: 1s;
+    background: #00E4E0;
+    color: white;
+    border-left: 1px solid rgb(131, 130, 130);
+    border-right: 1px solid rgb(131, 130, 130);
+  }
+  #hamnav label { 
+    display: inline-block; 
+    color: white;
+    background: #00E4E0;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  /* Break down menu items into vertical */
+  #hamitems a {
+    box-sizing: border-box;
+    display: block;
+    padding: 20px;
+    width: 30%;
+    border-top: 1px solid #333;
+  }
+  @media only screen and (max-width: 600px) {
+    #hamitems a {
+      width: 70%;
+      padding: 2vw;
+    }
+  }
+  /* Toggle Show/Hide Menu */
+  #hamitems { display: none; }
+  #hamnav input:checked ~ #hamitems { display: block; }
+
+
+/* [DOES NOT MATTER] */
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: arial, sans-serif;
+}
+#page-nav {
+  background: #00E4E0;
+  position: sticky;
+  top: 0;
+}
+  
